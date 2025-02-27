@@ -13,9 +13,11 @@ function Quiz() {
   const [timer, setTimer] = useState(15);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/questions").then((res) => {
-      setQuestions(res.data);
-    });
+    axios
+      .get("https://quiz-game-6q8v.onrender.com/api/questions")
+      .then((res) => {
+        setQuestions(res.data);
+      });
   }, []);
 
   useEffect(() => {
